@@ -12,6 +12,7 @@
 
 namespace numlib
 {
+	/*
 	class bigint
 	{
 	public:
@@ -59,23 +60,23 @@ namespace numlib
 		static bigint _toComplement(bigint &num);
 		bigint _regularize();
 		bigint _leftShift(size_t &index);
-	};
+	};*/
 
 	class fraction
 	{
 	public:
 		fraction();
 		fraction(int up);
-		fraction(bigint up);
-		fraction(bigint up, bigint down);
+		fraction(long long up);
+		fraction(long long up, long long down);
 		fraction(std::string num);
 
 		fraction getInverse();
-		bigint getNum();
-		bigint getDen();
+		long long getNum();
+		long long getDen();
 		bool isInt();
 
-		static fraction pow(const fraction &opt, const bigint &index);
+		//static fraction pow(const fraction &opt, const long long &index);
 
 		fraction operator-();
 		void operator=(const fraction &num);
@@ -91,10 +92,10 @@ namespace numlib
 		friend bool operator>=(const fraction &left, const fraction &right);
 
 	private:
-		bigint up;
-		bigint down;
-		static bigint _gcd(bigint m, bigint n);
-		static bigint _toInt(std::string opt);
+		long long up;
+		long long down;
+		static long long _gcd(long long m, long long n);
+		static long long _toInt(std::string opt);
 	};
 }
 #endif
