@@ -1,6 +1,5 @@
 ﻿#include "numlib.h"
 
-using numlib::bigint;
 using numlib::fraction;
 using std::cin;
 using std::cout;
@@ -11,17 +10,13 @@ using std::stringstream;
 string toString(fraction fra)
 {
 	stringstream str;
-	if (fra.getNum() < 0)
-	{
-		str << "-";
-	}
 	if (fra.isInt())
 	{
-		str << fra.getNum().toString();
+		str << fra.getNum();
 	}
 	else
 	{
-		str << fra.getNum().toString() << "/" << fra.getDen().toString();
+		str << fra.getNum() << "/" << fra.getDen();
 	}
 	return str.str();
 }
