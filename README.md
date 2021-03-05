@@ -3,7 +3,7 @@
     {
         有理数(rational number)：
         {
-            整数(integer)//已完成
+            整数(integer)//已完成(除法有亿点慢)
             分数(fraction)//已完成
         }
         无理数(irrational number):
