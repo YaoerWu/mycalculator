@@ -28,7 +28,7 @@ numlib::fraction::fraction(long long up, long long down)
 {
 	if (down == 0)
 	{
-		throw invalid_argument("分母不能为0");
+		//throw invalid_argument("分母不能为0");
 		return;
 	}
 	else
